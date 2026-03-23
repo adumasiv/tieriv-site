@@ -17,10 +17,14 @@ const initialState: FormState = {
 };
 
 export default function Contact() {
-  const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT as string | undefined;
+  const endpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT as
+    | string
+    | undefined;
 
   const [form, setForm] = useState<FormState>(initialState);
-  const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+  const [status, setStatus] = useState<
+    "idle" | "submitting" | "success" | "error"
+  >("idle");
   const [message, setMessage] = useState("");
 
   const isConfigured = useMemo(() => Boolean(endpoint), [endpoint]);
@@ -86,11 +90,15 @@ export default function Contact() {
 
       trackLead();
       setStatus("success");
-      setMessage("Thanks — your inquiry has been sent. I’ll get back to you soon.");
+      setMessage(
+        "Thanks — your inquiry has been sent. I’ll get back to you soon.",
+      );
       resetForm();
     } catch {
       setStatus("error");
-      setMessage("Something went wrong sending your message. Please email hello@tieriv.tech.");
+      setMessage(
+        "Something went wrong sending your message. Please email hello@tieriv.tech.",
+      );
     }
   };
 
@@ -98,28 +106,34 @@ export default function Contact() {
     <section className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
       <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr]">
         <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-cyan-400/15 via-white/[0.04] to-neutral-900 p-8">
-          <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">Let’s talk</p>
+          <p className="text-sm uppercase tracking-[0.3em] text-cyan-300">
+            Let’s talk
+          </p>
           <h1 className="mt-4 max-w-xl text-3xl font-semibold md:text-4xl">
             Planning an AV upgrade or trying to solve a system issue?
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-8 text-neutral-300">
-            Share a few details about your space, current setup, and what kind of help you need.
+            Share a few details about your space, current setup, and what kind
+            of help you need.
           </p>
 
           <div className="mt-8 grid gap-4 sm:grid-cols-2">
             <div className="rounded-2xl border border-white/10 bg-neutral-950/70 p-5">
               <p className="text-sm text-neutral-400">Email</p>
-              <p className="mt-2 font-medium text-white">hello@tieriv.tech</p>
+              <p className="mt-2 font-medium text-white">info@tieriv.tech</p>
             </div>
             <div className="rounded-2xl border border-white/10 bg-neutral-950/70 p-5">
               <p className="text-sm text-neutral-400">Typical Projects</p>
-              <p className="mt-2 font-medium text-white">Meeting rooms, event spaces, churches, AV upgrades</p>
+              <p className="mt-2 font-medium text-white">
+                Meeting rooms, event spaces, churches, AV upgrades
+              </p>
             </div>
           </div>
 
           {!isConfigured && (
             <div className="mt-6 rounded-2xl border border-yellow-400/25 bg-yellow-400/10 p-4 text-sm text-yellow-100">
-              Add <code>VITE_FORMSPREE_ENDPOINT</code> to your <code>.env</code> file to activate submissions.
+              Add <code>VITE_FORMSPREE_ENDPOINT</code> to your <code>.env</code>{" "}
+              file to activate submissions.
             </div>
           )}
         </div>
@@ -127,7 +141,10 @@ export default function Contact() {
         <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-8">
           <form className="space-y-5" onSubmit={handleSubmit}>
             <div>
-              <label htmlFor="name" className="mb-2 block text-sm text-neutral-300">
+              <label
+                htmlFor="name"
+                className="mb-2 block text-sm text-neutral-300"
+              >
                 Name
               </label>
               <input
@@ -142,7 +159,10 @@ export default function Contact() {
             </div>
 
             <div>
-              <label htmlFor="email" className="mb-2 block text-sm text-neutral-300">
+              <label
+                htmlFor="email"
+                className="mb-2 block text-sm text-neutral-300"
+              >
                 Email
               </label>
               <input
@@ -157,7 +177,10 @@ export default function Contact() {
             </div>
 
             <div>
-              <label htmlFor="projectType" className="mb-2 block text-sm text-neutral-300">
+              <label
+                htmlFor="projectType"
+                className="mb-2 block text-sm text-neutral-300"
+              >
                 Project Type
               </label>
               <select
@@ -176,7 +199,10 @@ export default function Contact() {
             </div>
 
             <div>
-              <label htmlFor="details" className="mb-2 block text-sm text-neutral-300">
+              <label
+                htmlFor="details"
+                className="mb-2 block text-sm text-neutral-300"
+              >
                 Project Details
               </label>
               <textarea
