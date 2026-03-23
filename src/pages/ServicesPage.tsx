@@ -1,6 +1,6 @@
-import SectionHeading from '../components/SectionHeading';
-import ServiceCard from '../components/ServiceCard';
-import { services } from '../data/siteData';
+import SectionHeading from "../components/SectionHeading";
+import ServiceCard from "../components/ServiceCard";
+import { services } from "../data/siteData";
 
 export default function ServicesPage() {
   return (
