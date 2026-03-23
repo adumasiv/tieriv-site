@@ -17,7 +17,7 @@ export default function ContactPage() {
             </div>
             <div className="rounded-2xl border border-white/10 bg-neutral-950/70 p-5">
               <p className="text-sm text-neutral-400">Website</p>
-              <p className="mt-2 font-medium text-white">TIERIV.TECH</p>
+              <p className="mt-2 font-medium text-white">tieriv.tech</p>
             </div>
           </div>
         </div>
