@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>TierIV</title>
+    <script>
+      const path = location.pathname.replace(/\/$/, '');
+      const redirect = '/?redirect=' + encodeURIComponent(path + location.search + location.hash);
+      location.replace(redirect);
+    </script>
+  </head>
+  <body></body>
+</html>
