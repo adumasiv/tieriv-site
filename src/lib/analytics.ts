@@ -25,6 +25,9 @@ export function initAnalytics() {
 
   window.gtag("js", new Date());
   window.gtag("config", GA_ID);
+  window.gtag?.('event', 'generate_lead', {
+  event_category: 'contact',
+});
 }
 
 export function trackPageView(path: string) {
