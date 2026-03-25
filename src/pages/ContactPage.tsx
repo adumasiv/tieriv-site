@@ -91,13 +91,13 @@ export default function Contact() {
       trackLead();
       setStatus("success");
       setMessage(
-        "Thanks — your inquiry has been sent. I’ll get back to you soon.",
+        "Thanks — your inquiry has been sent. We’ll get back to you soon.",
       );
       resetForm();
     } catch {
       setStatus("error");
       setMessage(
-        "Something went wrong sending your message. Please email hello@tieriv.tech.",
+        "Something went wrong sending your message. Please email info@tieriv.tech.",
       );
     }
   };
