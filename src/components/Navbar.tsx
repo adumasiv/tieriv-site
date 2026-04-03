@@ -8,13 +8,11 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-white/10 bg-neutral-950/85 backdrop-blur">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         <NavLink to="/" className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-2xl border border-cyan-400/30 bg-cyan-400/10">
-            <img
-              src="/images/Tier-IV-Website-Logo-MK1.png"
-              alt="Tier IV Logo"
-              className="h-8 w-8 object-contain"
-            />
-          </div>
+          <img
+            src="/images/Tier-IV-Website-Logo-MK1.png"
+            alt="Tier IV Logo"
+            className="h-10 w-10 object-contain"
+          />
           <div>
             <p className="text-sm font-semibold tracking-[0.25em] text-white">
               TIERIV.TECH
