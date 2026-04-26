@@ -11,7 +11,7 @@ export default function Navbar() {
           <img
             src="/images/Tier-IV-Website-Logo-MK1.png"
             alt="Tier IV Logo"
-            className="h-10 w-10 object-contain"
+            className="h-12 w-18 object-contain"
           />
           <div>
             <p className="text-sm font-semibold tracking-[0.25em] text-white">
